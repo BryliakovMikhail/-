@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/normalize.css" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="style/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="blur-container">
+    <header class="header">
+      <div class="container-md">
+        <div class="header__container">
+          <img class="header__logo" src="img/logo.png" alt="logo" />
+          <label class="header__label label" for="header-search">
+            <svg
+              class="search-icon"
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+                stroke="#FDD446"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M15 15L12 12"
+                stroke="#FDD446"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input
+              id="header-search"
+              class="header__input input"
+              type="search"
+              placeholder="Поиск..."
+            />
+          </label>
+          <button class="singin-btn btn btn-reset">Вход</button>
+          <button class="login-btn btn btn-reset">Регистрация</button>
+        </div>
+      </div>
+    </header>
+    <section class="sort container-md">
+      <div class="sort__container">
+        <label for="select-filter" class="select-label label">
+          <svg
+            class="select-arrow arrow-filter"
+            width="13"
+            height="10"
+            viewBox="0 0 13 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M6.5 10L12.1292 0.25H0.870835L6.5 10Z" fill="#FDD446" />
+          </svg>
+          <select
+            class="select select-filter"
+            name="select-filter"
+            id="select-filter"
+          >
+            <option value="value1">Фильтры</option>
+          </select>
+        </label>
+        <label for="sort-search" class="sort-label label">
+          <svg
+            class="search-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+              stroke="#FDD446"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M15 15L12 12"
+              stroke="#FDD446"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <input
+            id="sort-search"
+            type="search"
+            class="sort__input input"
+            placeholder="Поиск..."
+          />
+        </label>
+        <label for="select-sort" class="select-label label">
+          <svg
+            class="select-arrow arrow-sort"
+            width="14"
+            height="8"
+            viewBox="0 0 14 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1L7 7L13 1"
+              stroke="#FDD446"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <select class="select select-sort" id="select-sort">
+            <option value="value1">По умолчанию</option>
+          </select>
+        </label>
+      </div>
+    </section>
+    <section class="cards">
+      <div class="container-md">
+        <ul class="cards__list list-reset row">
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+          <li class="col-md-4 col-6">
+            <div class="cards__item card">
+              <img class="card-img" src="/img/card-img.jpg" alt="card-img" />
+              <h2 class="card__title">Без слов</h2>
+              <div class="card__info">
+                <img
+                  class="card__small-img"
+                  src="/img/small-card-img.jpg"
+                  alt="small-card-img"
+                />
+                <div class="card__wrapper">
+                  <p class="card__name name">Настя Ивлеева Вячеславовна</p>
+                  <p class="name-descr">проверено</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Редкость:</p>
+                <div class="status-wrapper">
+                  <p class="card-status">уникальная</p>
+                </div>
+              </div>
+              <div class="card__wrapper-descr">
+                <p class="card-descr">Цена:</p>
+                <p class="card-price">от 500 ₽</p>
+              </div>
+              <div class="btn-wrapper">
+              <button class="btn-reset card-btn">Купить</button>
+            </div>
+            </div>
+          </li>
+        </ul>
+        
+      </div>
+    </section>
+    <nav class="nav main-nav">
+      <div class="container-md main-nav__container">
+        <ul class="nav__list list-reset">
+          <li class="nav__item">
+            <a href="page3.html" class="nav__link">«</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">1</a>
+          </li>
+          <li class="nav__item">
+            <a href="page2.html" class="nav__link">2</a>
+          </li>
+          <li class="nav__item">
+            <a href="page3.html" class="nav__link">3</a>
+          </li>
+          <li class="nav__item">
+            <a href="page4.html" class="nav__link choose-page">4</a>
+          </li>
+          <li class="nav__item">
+            <a href="page5.html" class="nav__link">5</a>
+          </li>
+          <li class="nav__item">
+            <a href="page5.html" class="nav__link">»</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <footer class="footer">
+      <div class="container-md footer__container">
+        <nav class="footer__nav nav">
+          <div class="footer__wrapper">
+            <h2 class="footer__title">NFT</h2>
+            <ul class="nav__list list-reset">
+              <li class="nav__item">
+                <a href="" class="nav__link">Что такое NFT</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Создайте NFT с&nbsp;нами</a>
+              </li>
+              <li class="nav__social-item">
+                <a href="" class="nav__social-link"><img src="./img/twitter-link.svg" alt="twitter"></a>
+                <a href="" class="nav__social-link"><img src="./img/vk-link.svg" alt="vk"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__wrapper">
+            <h2 class="footer__title">Компания</h2>
+            <ul class="nav__list list-reset">
+              <li class="nav__item">
+                <a href="" class="nav__link">О&nbsp;нас</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Отправить запрос</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__wrapper">
+            <h2 class="footer__title">Другое</h2>
+            <ul class="nav__list list-reset">
+              <li class="nav__item">
+                <a href="" class="nav__link">Условия использования</a>
+              </li>
+              <li class="nav__item">
+                <a href="" class="nav__link">Политика конфиденциальности</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom container-md">
+        <p class="footer__descr">
+            @ tnft.ru Company, Inc
+        </p>
+      </div>
+    </footer>
+    <div class="blur1 blur"></div>
+        <div class="blur2 blur"></div>
+        <div class="blur3 blur"></div>
+        <div class="blur4 blur"></div>
+        <div class="big-blur blur"></div>
+    </div>
+  </body>
+</html>
